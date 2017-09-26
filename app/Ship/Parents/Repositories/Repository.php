@@ -5,7 +5,7 @@ namespace App\Ship\Parents\Repositories;
 use Apiato\Core\Abstracts\Repositories\Repository as AbstractRepository;
 
 /**
- * Class Repository.
+ * Class Repositories.
  *
  * @author  Mahmoud Zalt <mahmoud@zalt.me>
  */

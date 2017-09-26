@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Repository Pagination
+    | Repositories Pagination
     |--------------------------------------------------------------------------
     |
     */
@@ -12,7 +12,7 @@ return [
 
         'limit' => env('PAGINATION_LIMIT_DEFAULT', 15),
 
-         // if enabled it allows users to skip pagination by passing `?limit=0`.
+        // if enabled it allows users to skip pagination by passing `?limit=0`.
         'skip' => env('PAGINATION_SKIP', false),
     ],
 
@@ -27,8 +27,8 @@ return [
     |    * JsonApiSerializer
     |
     */
-    'fractal'    => [
-        'params'     => [
+    'fractal' => [
+        'params' => [
             'include' => 'include',
         ],
         'serializer' => League\Fractal\Serializer\DataArraySerializer::class,
@@ -40,7 +40,7 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'cache'      => [
+    'cache' => [
         /*
          |--------------------------------------------------------------------------
          | Cache Status
@@ -49,7 +49,7 @@ return [
          | Enable or disable cache
          |
          */
-        'enabled'    => env('ELOQUENT_QUERY_CACHE', false),
+        'enabled' => env('ELOQUENT_QUERY_CACHE', false),
 
         /*
          |--------------------------------------------------------------------------
@@ -59,14 +59,14 @@ return [
          | Time of expiration cache
          |
          */
-        'minutes'    => env('ELOQUENT_QUERY_CACHE_TIME', 30),
+        'minutes' => env('ELOQUENT_QUERY_CACHE_TIME', 30),
 
         /*
          |--------------------------------------------------------------------------
-         | Cache Repository
+         | Cache Repositories
          |--------------------------------------------------------------------------
          |
-         | Instance of Illuminate\Contracts\Cache\Repository
+         | Instance of Illuminate\Contracts\Cache\Repositories
          |
          */
         'repository' => 'cache',
@@ -79,7 +79,7 @@ return [
           |
           |
           */
-        'clean'      => [
+        'clean' => [
 
             /*
               |--------------------------------------------------------------------------
@@ -91,7 +91,7 @@ return [
 
             /*
               |--------------------------------------------------------------------------
-              | Actions in Repository
+              | Actions in Repositories
               |--------------------------------------------------------------------------
               |
               | create : Clear Cache on create Entry in repository
@@ -99,14 +99,14 @@ return [
               | delete : Clear Cache on delete Entry in repository
               |
               */
-            'on'      => [
+            'on' => [
                 'create' => true,
                 'update' => true,
                 'delete' => true,
             ],
         ],
 
-        'params'  => [
+        'params' => [
 
             /*
             |--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ return [
         | 'except'  =>['find'],
         */
         'allowed' => [
-            'only'   => null,
+            'only' => null,
             'except' => null,
         ],
     ],
@@ -149,7 +149,7 @@ return [
     | Settings of request parameters names that will be used by Criteria
     |
     */
-    'criteria'   => [
+    'criteria' => [
         /*
         |--------------------------------------------------------------------------
         | Accepted Conditions
@@ -201,13 +201,13 @@ return [
         |   http://prettus.local/?search=lorem&orderBy=id&sortedBy=desc
         |
         */
-        'params'             => [
-            'search'       => 'search',
+        'params' => [
+            'search' => 'search',
             'searchFields' => 'searchFields',
-            'orderBy'      => 'orderBy',
-            'sortedBy'     => 'sortedBy',
-            'filter'       => 'l5_filter', // we will override the filter in apiato.
-            'with'         => 'l5_with' // use `include` instead.
+            'orderBy' => 'orderBy',
+            'sortedBy' => 'sortedBy',
+            'filter' => 'l5_filter', // we will override the filter in apiato.
+            'with' => 'l5_with' // use `include` instead.
         ],
     ],
     /*
@@ -216,15 +216,15 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'generator'  => [
-        'basePath'      => env('SRC_PATH'),
-        'rootNamespace' => env('ROOT_NAMESPACE').'\\',
-        'paths'         => [
-            'models'       => 'Entities',
+    'generator' => [
+        'basePath' => env('SRC_PATH'),
+        'rootNamespace' => env('ROOT_NAMESPACE') . '\\',
+        'paths' => [
+            'models' => 'Entities',
             'repositories' => 'Repositories',
-            'interfaces'   => 'Repositories',
+            'interfaces' => 'Repositories',
             'transformers' => 'Transformers',
-            'presenters'   => 'Presenters',
+            'presenters' => 'Presenters',
         ],
     ],
 ];

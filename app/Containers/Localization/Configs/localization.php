@@ -14,10 +14,9 @@ return [
     */
 
     'supported_languages' => [
-        'ar' => 'Arabic',
         'en' => 'English',
-        'es' => 'Spanish',
-        'fr' => 'French',
+        'de' => 'German',
+        'nl' => 'Dutch'
     ],
 
 ];

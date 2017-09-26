@@ -1,12 +1,20 @@
 {
-  "name": "apiato/authentication",
-  "description": "apiato Container.",
+  "name": "traveldeal/authentication",
+  "description": "Traveldeal JWT authentication container.",
+  "type": "apiato-container",
   "require": {
-    "laravel/passport": "3.*"
+    "tymon/jwt-auth": "1.0.*"
   },
   "scripts": {
     "post-create-project-cmd": [
-
     ]
+  },
+  "extra": {
+    "apiato": {
+      "container": {
+        "name": "Authentication"
+        // The name of the container within the /app/Containers folder
+      }
+    }
   }
 }

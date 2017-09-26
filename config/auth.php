@@ -42,7 +42,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'passport',
+            'driver' => 'jwt',
             'provider' => 'users',
         ],
     ],
@@ -66,8 +66,8 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model'  => env('USER_NAMESPACE') . User::class,
+            'driver' => 'jwt_user',
+            'model' => env('USER_NAMESPACE') . User::class,
         ],
 
         // 'users' => [

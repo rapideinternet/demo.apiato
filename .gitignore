@@ -12,3 +12,4 @@ storage/logs/laravel.log
 /public/uploads/
 composer.lock
 .idea/
+package-lock.json
